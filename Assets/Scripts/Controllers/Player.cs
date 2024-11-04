@@ -13,11 +13,13 @@ public class Player : MonoBehaviour
     public float decelerationTime = 1f;
     public float maxSpeed = 7.5f;
     public float turnSpeed = 180f;
+    public float warpSpeed = 3;
 
     private float acceleration;
     private float deceleration;
     private Vector3 currentVelocity;
     private float maxSpeedSqr;
+    
 
     private void Start()
     {
@@ -39,6 +41,9 @@ public class Player : MonoBehaviour
             moveDirection += Vector3.right;
         if (Input.GetKey(KeyCode.A))
             moveDirection += Vector3.left;
+
+        if (Input.GetKeyDown(KeyCode.Q))
+            transform.position = transform.position + moveDirection * warpSpeed;
 
         if (moveDirection.sqrMagnitude > 0)
         {

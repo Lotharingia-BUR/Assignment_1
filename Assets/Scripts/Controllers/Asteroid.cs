@@ -40,7 +40,6 @@ public class Asteroid : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && (playerPos.position - transform.position).magnitude < 5)
         {
             moveDirection += (playerPos.position - transform.position + new Vector3(Random.Range(-1,1), Random.Range(-1, 1), Random.Range(-1, 1))) * 100;
-            Debug.Log("A");
         }
 
 

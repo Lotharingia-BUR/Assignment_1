@@ -42,8 +42,13 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
             moveDirection += Vector3.left;
 
+        //Task1
         if (Input.GetKeyDown(KeyCode.Q))
             transform.position = transform.position + moveDirection * warpSpeed;
+
+        //Task2
+        if (Input.GetKeyDown(KeyCode.E))
+            Instantiate(bombPrefab, transform.position, Quaternion.identity);
 
         if (moveDirection.sqrMagnitude > 0)
         {

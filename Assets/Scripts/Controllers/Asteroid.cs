@@ -7,6 +7,7 @@ public class Asteroid : MonoBehaviour
     public float moveSpeed;
     public float arrivalDistance;
     public float maxFloatDistance;
+    public Transform player;
 
     // Start is called before the first frame update
     void Start()

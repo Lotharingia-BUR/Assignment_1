@@ -16,7 +16,7 @@ public class Homing_Bombs : MonoBehaviour
         if (!lockOn)
         {
             apple = GameObject.Find("Bombs");
-            new List<Vector3> apple.transform.position;
+            /*new List<Vector3> apple.transform.position;*/
         }
         for (int i = 0; i < objects.Capacity; i++)
         {
